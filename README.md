@@ -1,0 +1,1 @@
+# Case Prático AutoU - Estagiário de Produtos Digitais & AI
