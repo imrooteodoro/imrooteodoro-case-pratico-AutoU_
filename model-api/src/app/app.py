@@ -3,7 +3,7 @@ import sys
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import torch
-from services.nlp import NlpService 
+from app.services.nlp import NlpService 
 
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
