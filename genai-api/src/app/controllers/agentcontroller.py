@@ -1,10 +1,10 @@
 from flask import request, jsonify
 import os
 import requests
-from services.email_genai import EmailGenai
-from services.extract_text import TextExtractor
+from app.services.email_genai import EmailGenai
+from app.services.extract_text import TextExtractor
 from dotenv import load_dotenv
-from auth.auth import connect_to_model_api
+from app.auth.auth import connect_to_model_api
 
 
 class AgentController:

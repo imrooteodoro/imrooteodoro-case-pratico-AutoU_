@@ -1,8 +1,8 @@
 import os
 from flask import request, render_template
 from werkzeug.utils import secure_filename
-from controllers.agentcontroller import AgentController
-from auth.auth import connect_to_model_api
+from app.controllers.agentcontroller import AgentController
+from app.auth.auth import connect_to_model_api
 
 ALLOWED_EXTENSIONS = {'pdf', 'txt'}
 UPLOAD_FOLDER = 'uploads'

@@ -1,5 +1,5 @@
 from flask import Flask
-from routes.sendmessage import send_to_bot
+from app.routes.sendmessage import send_to_bot
 import os
 
 

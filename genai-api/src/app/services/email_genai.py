@@ -1,5 +1,5 @@
 import google.generativeai as genai
-from auth.auth import authenticate_with_genai
+from app.auth.auth import authenticate_with_genai
 
 
 class EmailGenai:
