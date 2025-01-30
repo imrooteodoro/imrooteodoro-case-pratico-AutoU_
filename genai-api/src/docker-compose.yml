@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  genai-app:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    environment:
+      - FLASK_APP=app/app.py
+      - FLASK_ENV=production
+      - API_key=${api_key}
+      - API_URL=${api_url}
+    env_file:
+      - .env 
+    restart: always
