@@ -79,7 +79,6 @@ html.dark .loading-step.active {
     background-color: rgba(255, 107, 53, 0.2);
 }
 
-
 .dark .theme-card {
     background-color: #1f2937;
     color: #f3f4f6;
@@ -92,4 +91,32 @@ html.dark .loading-step.active {
 
 .dark .loading-step {
     color: #f3f4f6;
+}
+
+/* Gradiente para o texto */
+.gradient-text {
+    background: linear-gradient(90deg, var(--orange-primary), var(--orange-secondary), #3B82F6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Ajustes para o tema escuro */
+html.dark .gradient-text {
+    background: linear-gradient(90deg, var(--orange-secondary), var(--orange-primary), #60A5FA);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+footer {
+    background-color: white; /* Fundo branco no tema claro */
+    border-top: 1px solid #e5e7eb; /* Borda sutil no tema claro */
+    margin-top: 2rem; /* Espaçamento superior */
+    padding: 1rem 0; /* Espaçamento interno */
+}
+
+html.dark footer {
+    background-color: #1f2937; /* Fundo escuro no tema escuro */
+    border-top-color: #374151; /* Borda sutil no tema escuro */
 }
