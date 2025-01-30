@@ -2,6 +2,13 @@
 
 Um classificador de e-mails inteligente desenvolvido para uma empresa fictícia do setor financeiro, utilizando Natural Language Processing (NLP) e Generative AI (GenAI).
 
+## Treinamento do Modelo
+
+O modelo de classificação foi desenvolvido utilizando o BERTimbau, uma versão do BERT treinada para o português brasileiro. O processo de treinamento foi realizado no Google Colab, e você pode encontrar o notebook completo no diretório `notebook`, assim como o dataset em `notebook/mocked_dataset`.
+
+O modelo treinado está disponível publicamente no Hugging Face:
+- [imrooteodoro/email_classifier](https://huggingface.co/imrooteodoro/email_classifier)
+
 ## Pré-requisitos
 
 - Docker
