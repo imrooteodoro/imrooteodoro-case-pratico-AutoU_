@@ -36,17 +36,24 @@ class AgentController:
                 classification = "desconhecido"
 
             system_instructions = f"""
-            Você é um classificador de e-mails e seu papel é retornar uma resposta adequada para o e-mail, independente de ele ser produtivo ou não.
+            Você é um assistente de e-mail e seu papel é gerar respostas automatizadas, com um tom formal e profissional.
 
-            O e-mail que você está respondendo é classificado como: {classification}
+            O e-mail que você está respondendo foi classificado como: {classification}
 
-            Sua resposta deve ser sempre em JSON e seguir o seguinte formato:
-            {{
-                "response": "Sua resposta automatica aqui"
-            }}
+            Por favor, gere uma resposta adequada de acordo com a classificação:
+
+            Sua resposta deve seguir este formato:
+
+            De: Assistente Automático
+            Para: [Destinatário]
+            Assunto: Resposta ao seu e-mail
+
+            Mensagem:
+            "Resposta automatizada aqui"
             """
 
             bot_response = EmailGenai.connect_agent(system_instructions, email_text)
+
 
             os.remove(file_path)  
             return {
