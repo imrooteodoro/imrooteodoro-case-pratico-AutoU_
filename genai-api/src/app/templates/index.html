@@ -49,31 +49,32 @@
         </form>
 
         {% if prediction is not none %}
-            {% if prediction == "Erro" %}
-                <div class="mt-8 bg-red-100 border-l-4 border-red-500 p-4 rounded">
-                    <strong class="text-red-700">Erro:</strong> 
-                    <span class="text-red-600">{{ bot_response }}</span>
-                </div>
-            {% else %}
-                <div class="mt-8 p-6 bg-gray-50 dark:bg-gray-700 rounded-lg">
-                    <h2 class="text-xl font-semibold mb-4 text-gray-800 dark:text-white">
-                        Resultado da Análise
-                    </h2>
-                    <div class="space-y-4">
-                        <div class="flex items-center space-x-2">
-                            <span class="font-medium text-gray-700 dark:text-gray-300">Classificação:</span>
-                            <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-100 rounded-full">
-                                {{ prediction }}
-                            </span>
-                        </div>
-                        <div class="border-t dark:border-gray-600 pt-4">
-                            <p class="font-medium text-gray-700 dark:text-gray-300">Resposta do Sistema:</p>
-                            <p class="mt-2 text-gray-600 dark:text-gray-400 whitespace-pre-line">{{ bot_response }}</p>
-                        </div>
+        {% if prediction == "Erro" %}
+            <div class="mt-8 bg-red-100 border-l-4 border-red-500 p-4 rounded">
+                <strong class="text-red-700">Erro:</strong> 
+                <span class="text-red-600">{{ bot_response }}</span>
+            </div>
+        {% else %}
+            <div class="mt-8 p-6 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                <h2 class="text-xl font-semibold mb-4 text-gray-800 dark:text-white">
+                    Resultado da Análise - {{ classification|capitalize }}
+                </h2>
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-2">
+                        <span class="font-medium text-gray-700 dark:text-gray-300">Classificação:</span>
+                        <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-100 rounded-full">
+                            {{ prediction|capitalize }}
+                        </span>
+                    </div>
+                    <div class="border-t dark:border-gray-600 pt-4">
+                        <p class="font-medium text-gray-700 dark:text-gray-300">Resposta do Sistema:</p>
+                        <p class="mt-2 text-gray-600 dark:text-gray-400 whitespace-pre-line">{{ bot_response }}</p>
                     </div>
                 </div>
-            {% endif %}
+            </div>
         {% endif %}
+    {% endif %}
+    
     </div>
 
     <div id="loading">
