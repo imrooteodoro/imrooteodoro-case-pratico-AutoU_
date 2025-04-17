@@ -1,4 +1,4 @@
-# Case Prático AutoU - Estagiário de Produtos Digitais & AI
+# Classificador de emails (NLP and GenAI)
 
 Um classificador de e-mails inteligente desenvolvido para uma empresa fictícia do setor financeiro, utilizando Natural Language Processing (NLP) e Generative AI (GenAI).
 
